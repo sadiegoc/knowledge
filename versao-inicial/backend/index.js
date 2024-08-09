@@ -1,9 +1,12 @@
 const app = require('express')();
 const consign = require('consign');
-const db = require('./config/db')
-const mongoose = require('mongoose')
+const db = require('./config/db');
+const mongoose = require('mongoose');
+const cors = require('cors');
 require('./config/mongodb')
 
+const corsOptions = { origin: "http://localhost:8080" };
+app.use(cors(corsOptions));
 const PORT = 8888;
 
 app.db = db
