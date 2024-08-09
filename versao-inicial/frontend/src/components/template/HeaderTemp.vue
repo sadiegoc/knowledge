@@ -4,9 +4,11 @@
             <i class="fa fa-lg" :class="icon"></i>
         </a>
         <h1 class="title">
-            {{ title }}
+            <router-link to="/home">
+                {{ title }}
+            </router-link>
         </h1>
-        <UserDropdown/>
+        <UserDropdown v-if="!hideUserDropdown"/>
     </header>
 </template>
 <script>
@@ -62,6 +64,7 @@ export default {
     }
 
     header.header > a.toggle:hover {
+        color: white;
         background-color: rgba(0, 0, 0, 0.2);
     }
 </style>
