@@ -5,7 +5,6 @@
             main="Administração do Sistema"
             sub="Cadastro & Cia"
         />
-        <button @click="toast">toast</button>
         <div class="admin-pages-tabs">
             <ul class="nav nav-underline">
                 <li class="nav-item">
@@ -31,7 +30,6 @@ import PageTitle from '../template/PageTitle.vue'
 import ArticleAdmin from './ArticleAdmin.vue'
 import CategoryAdmin from './CategoryAdmin.vue'
 import UserAdmin from './UserAdmin.vue'
-import msg from '@/config/msg.js'
 
 export default {
     name: 'AdminPages',
@@ -58,9 +56,6 @@ export default {
             this.users = true
             this.category = false
             this.article = false
-        },
-        toast () {
-            msg.error()
         }
     }
 }
@@ -72,5 +67,13 @@ export default {
 
 .nav-content div.show {
     display: block;
+}
+
+.nav .nav-item a {
+    text-decoration: none; color: black;
+}
+
+.nav .nav-item a:hover {
+    color: #1e469a;
 }
 </style>

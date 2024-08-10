@@ -1,11 +1,13 @@
 import { toast } from 'vue3-toastify'
 
 const msg = {
-    success () {
-        toast.success("Operação realizada com sucesso!")
+    success (success) {
+        const msg = success || "Operação realizada com sucesso!"
+        toast.success(msg)
     },
-    error () {
-        toast.error("Oops... erro inesperado.")
+    error (error) {
+        const msg = error || "Oops... erro inesperado."
+        toast.error(msg);
     }
 }
 
