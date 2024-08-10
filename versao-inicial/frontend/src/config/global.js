@@ -1,5 +1,6 @@
 import msgToast from './msg'
 
+export const userKey = '__knowledge_user'
 export const baseUrl = 'http://localhost:8888'
 
 export function showError (e) {
@@ -21,3 +22,5 @@ export function showSuccess (e) {
         msgToast.success()
     }
 }
+
+export default { baseUrl, showError, showSuccess, userKey }

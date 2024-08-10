@@ -82,7 +82,6 @@ export default {
             const url = `${baseUrl}/users`
             axios.get(url).then(res => {
                 this.users = res.data
-                console.log(this.users)
             })
         },
         reset () {
